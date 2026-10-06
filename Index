@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember & Spice — Modern Indian Kitchen</title>
+  <meta name="description" content="Ember & Spice — a modern Indian kitchen in Ludhiana.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="logo" href="#">Ember & Spice</a>
+
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <button class="nav-btn" id="reserveTop">Reserve</button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MODERN INDIAN KITCHEN · LUDHIANA</p>
+
+        <h1>
+          Bold Indian flavours.<br>
+          <span>Fired differently.</span>
+        </h1>
+
+        <p class="hero-copy">
+          A contemporary Indian dining experience built around live-fire cooking,
+          familiar spices and a little bit of rebellion.
+        </p>
+
+        <div class="actions">
+          <a class="primary" href="#menu">Explore the menu</a>
+          <button class="secondary" id="reserveHero">Book a table</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">FROM THE KITCHEN</p>
+        <h2>Our favourites</h2>
+      </div>
+
+      <div class="menu-grid">
+
+        <article class="dish">
+          <div class="dish-number">01</div>
+          <h3>Tandoori Paneer</h3>
+          <p>Charred paneer, smoked peppers, mint chutney and house spice.</p>
+          <strong>₹495</strong>
+        </article>
+
+        <article class="dish featured">
+          <div class="dish-number">02</div>
+          <h3>Ember Chicken</h3>
+          <p>Fire-roasted chicken, black garlic, chilli glaze and coriander.</p>
+          <strong>₹695</strong>
+        </article>
+
+        <article class="dish">
+          <div class="dish-number">03</div>
+          <h3>Mango Kulfi</h3>
+          <p>Alphonso mango, pistachio and a touch of cardamom.</p>
+          <strong>₹295</strong>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="story" class="story section">
+      <div>
+        <p class="eyebrow">THE EMBER PHILOSOPHY</p>
+        <h2>Old recipes.<br>New fire.</h2>
+      </div>
+
+      <p>
+        We take the flavours people grew up with and give them a modern,
+        fire-led treatment. Nothing complicated — just good ingredients,
+        proper cooking and food worth coming back for.
+      </p>
+    </section>
+
+    <section id="visit" class="visit section">
+      <div>
+        <p class="eyebrow">COME BY</p>
+        <h2>Make it an evening.</h2>
+        <p>Model Town, Ludhiana · Tue–Sun · 12 PM–11 PM</p>
+      </div>
+
+      <button class="primary" id="reserveBottom">Reserve a table</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Ember & Spice</span>
+    <span>Demo website · Built for presentation</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    Demo only — reservation requests aren't connected yet.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
