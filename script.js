@@ -1,9 +1,15 @@
-const toast = document.getElementById("toast");
-
-function showDemoMessage() {
-  toast.classList.add("show");
-  window.setTimeout(() => toast.classList.remove("show"), 3500);
-}
-
-document.querySelectorAll("#reserveTop, #reserveHero, #reserveBottom")
-  .forEach(button => button.addEventListener("click", showDemoMessage));
+(() => {
+const progress=document.querySelector('.progress'),nav=document.querySelector('nav'),hamb=document.querySelector('.hamb'),toast=document.querySelector('.toast');let toastTimer,previousFocus;
+const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+'%'};addEventListener('scroll',update,{passive:true});update();
+hamb.addEventListener('click',()=>{const open=hamb.getAttribute('aria-expanded')!=='true';hamb.setAttribute('aria-expanded',String(open));hamb.setAttribute('aria-label',open?'Close menu':'Open menu');nav.classList.toggle('open',open)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');hamb.setAttribute('aria-expanded','false')}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal,.dish').forEach(el=>observer.observe(el));
+document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.dish').forEach(card=>{const show=btn.dataset.filter==='all'||card.dataset.category===btn.dataset.filter;card.classList.toggle('filtered',!show);if(show){card.classList.remove('visible');requestAnimationFrame(()=>card.classList.add('visible'))}})}));
+function say(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),4200)}
+const date=document.querySelector('input[name=date]');const d=new Date(),today=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);date.min=today;
+document.querySelector('#booking').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const name=e.currentTarget.elements.name.value.trim();say(`Thanks, ${name}! This is a demo — no real reservation was sent.`);e.currentTarget.reset();date.min=today});
+const box=document.querySelector('.lightbox'),boxImg=box.querySelector('img'),close=box.querySelector('button');
+document.querySelectorAll('.gallery-item').forEach(item=>item.addEventListener('click',()=>{previousFocus=item;boxImg.src=item.dataset.full;boxImg.alt=item.querySelector('img').alt;box.hidden=false;document.body.classList.add('locked');close.focus()}));
+function hideBox(){box.hidden=true;boxImg.src='';document.body.classList.remove('locked');if(previousFocus)previousFocus.focus()}close.addEventListener('click',hideBox);box.addEventListener('click',e=>{if(e.target===box)hideBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)hideBox();if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');hamb.setAttribute('aria-expanded','false');hamb.focus()}});
+const sections=[...document.querySelectorAll('main section[id]')],links=[...nav.querySelectorAll('a[href^="#"]')];const activeObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>activeObserver.observe(s));
+})();

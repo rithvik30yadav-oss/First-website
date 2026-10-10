@@ -1,115 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ember & Spice — Modern Indian Kitchen</title>
-  <meta name="description" content="Ember & Spice — a modern Indian kitchen in Ludhiana.">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header class="nav">
-    <a class="logo" href="#">Ember & Spice</a>
-
-    <nav>
-      <a href="#menu">Menu</a>
-      <a href="#story">Our Story</a>
-      <a href="#visit">Visit</a>
-    </nav>
-
-    <button class="nav-btn" id="reserveTop">Reserve</button>
-  </header>
-
-  <main>
-
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">MODERN INDIAN KITCHEN · LUDHIANA</p>
-
-        <h1>
-          Bold Indian flavours.<br>
-          <span>Fired differently.</span>
-        </h1>
-
-        <p class="hero-copy">
-          A contemporary Indian dining experience built around live-fire cooking,
-          familiar spices and a little bit of rebellion.
-        </p>
-
-        <div class="actions">
-          <a class="primary" href="#menu">Explore the menu</a>
-          <button class="secondary" id="reserveHero">Book a table</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="menu" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">FROM THE KITCHEN</p>
-        <h2>Our favourites</h2>
-      </div>
-
-      <div class="menu-grid">
-
-        <article class="dish">
-          <div class="dish-number">01</div>
-          <h3>Tandoori Paneer</h3>
-          <p>Charred paneer, smoked peppers, mint chutney and house spice.</p>
-          <strong>₹495</strong>
-        </article>
-
-        <article class="dish featured">
-          <div class="dish-number">02</div>
-          <h3>Ember Chicken</h3>
-          <p>Fire-roasted chicken, black garlic, chilli glaze and coriander.</p>
-          <strong>₹695</strong>
-        </article>
-
-        <article class="dish">
-          <div class="dish-number">03</div>
-          <h3>Mango Kulfi</h3>
-          <p>Alphonso mango, pistachio and a touch of cardamom.</p>
-          <strong>₹295</strong>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="story" class="story section">
-      <div>
-        <p class="eyebrow">THE EMBER PHILOSOPHY</p>
-        <h2>Old recipes.<br>New fire.</h2>
-      </div>
-
-      <p>
-        We take the flavours people grew up with and give them a modern,
-        fire-led treatment. Nothing complicated — just good ingredients,
-        proper cooking and food worth coming back for.
-      </p>
-    </section>
-
-    <section id="visit" class="visit section">
-      <div>
-        <p class="eyebrow">COME BY</p>
-        <h2>Make it an evening.</h2>
-        <p>Model Town, Ludhiana · Tue–Sun · 12 PM–11 PM</p>
-      </div>
-
-      <button class="primary" id="reserveBottom">Reserve a table</button>
-    </section>
-
-  </main>
-
-  <footer>
-    <span>Ember & Spice</span>
-    <span>Demo website · Built for presentation</span>
-  </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    Demo only — reservation requests aren't connected yet.
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11100e"><meta name="description" content="Ember & Spice — modern Indian kitchen concept demo">
+<title>Ember & Spice — Modern Indian Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body><div class="progress"></div>
+<div class="announcement"><span>✳</span> A LITTLE FIRE. A LOT OF SOUL. <b>LUDHIANA · TUE–SUN · 12 PM–11 PM</b></div>
+<header><a class="brand" href="#home"><span class="monogram">E<span>&</span>S</span><span>EMBER <i>&</i> SPICE<small>MODERN INDIAN KITCHEN</small></span></a>
+<button class="hamb" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+<nav><a href="#home">Home</a><a href="#menu">The menu</a><a href="#story">Our story</a><a href="#gallery">The space</a><a href="#visit">Find us</a><a class="nav-cta" href="#reserve">Book a table ↗</a></nav></header>
+<main>
+<section class="hero" id="home"><div class="hero-bg"></div><div class="hero-shade"></div><div class="hero-copy rise"><p class="eyebrow">✳ &nbsp; ROOTED IN INDIA. REIMAGINED BY FIRE.</p><h1>Old recipes.<br><em>New fire.</em></h1><p>A modern Indian kitchen for slow evenings, bold flavours, and one-more-bite moments.</p><div class="actions"><a class="btn" href="#menu">Explore the menu ↗</a><a class="watch" href="#story">◉ &nbsp; The Ember story</a></div><div class="hero-foot">01 / 04 <span></span> FLAME-KISSED. HEART-MADE.</div></div><div class="side-note">CRAFTED WITH FIRE ✳ SERVED WITH SOUL</div></section>
+<section class="intro reveal"><div class="label">01 &nbsp; / &nbsp; NOT JUST A MEAL<br>IT'S A LITTLE RITUAL.</div><div><h2>Some flavours take you <em>home.</em><br>Others take you somewhere new.</h2><div class="intro-bottom"><p>Familiar Indian favourites meet a little curiosity. Seasonal produce, patient cooking, and the kind of warmth that makes you stay for dessert.</p><a class="circle" href="#story">↘</a></div></div></section>
+<section class="menu section" id="menu"><div class="section-head reveal"><div><p class="eyebrow">✳ &nbsp; GOOD THINGS, FROM THE FIRE</p><h2>A menu with <em>character.</em></h2></div><p>Made to be shared.<br>Remembered long after.</p></div>
+<div class="filters reveal"><button class="active" data-filter="all">Everything <small>06</small></button><button data-filter="small">Small plates <small>02</small></button><button data-filter="mains">From the fire <small>02</small></button><button data-filter="sweet">Something sweet <small>02</small></button></div>
+<div class="dishes">
+<article class="dish reveal" data-category="small"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1000&q=85" alt="Paneer curry"><span>01</span><b>HOUSE FAVOURITE</b></div><div class="dish-info"><div><h3>Tandoori Paneer</h3><p>Smoky paneer · mint chutney · charred lemon</p></div><strong>₹495</strong></div></article>
+<article class="dish reveal" data-category="mains"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=85" alt="Indian chicken curry"><span>02</span></div><div class="dish-info"><div><h3>Ember Chicken</h3><p>Slow-cooked gravy · warming spices · naan</p></div><strong>₹695</strong></div></article>
+<article class="dish reveal" data-category="small"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85" alt="Golden Indian snacks"><span>03</span></div><div class="dish-info"><div><h3>Market Samosas</h3><p>Flaky pastry · spiced potato · tamarind</p></div><strong>₹295</strong></div></article>
+<article class="dish reveal" data-category="mains"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85" alt="Grilled food with herbs"><span>04</span><b>FIRE-GRILLED</b></div><div class="dish-info"><div><h3>Smoked Seekh</h3><p>Live-fire kebab · pickled onion · coriander</p></div><strong>₹625</strong></div></article>
+<article class="dish reveal" data-category="sweet"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=85" alt="Creamy fruit dessert"><span>05</span></div><div class="dish-info"><div><h3>Mango Kulfi</h3><p>Alphonso mango · pistachio · cardamom</p></div><strong>₹295</strong></div></article>
+<article class="dish reveal" data-category="sweet"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85" alt="Chocolate cake"><span>06</span><b>GRAND FINALE</b></div><div class="dish-info"><div><h3>Dark Chocolate Bites</h3><p>70% cocoa · sea salt · roasted almond</p></div><strong>₹325</strong></div></article></div>
+<div class="menu-foot">THE MENU CHANGES WITH THE SEASONS. <a href="#reserve">COME HUNGRY ↗</a></div></section>
+<section class="quote"><div class="quote-overlay"></div><div class="quote-copy reveal"><span>“</span><blockquote>The best ingredient<br>is always <em>the feeling.</em></blockquote><p>GOOD FOOD. GREAT COMPANY. NO RUSH.</p></div></section>
+<section class="story section" id="story"><div class="story-photo reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=85" alt="Warm restaurant dining room"><small>A TABLE IS A PLACE TO BELONG.</small><div class="stamp">E<span>&</span>S<small>EST. WITH SOUL</small></div></div><div class="story-copy reveal"><p class="eyebrow">✳ &nbsp; A LITTLE ABOUT US</p><h2>Tradition in our roots.<br><em>Curiosity in our kitchen.</em></h2><p>We grew up around long tables, second helpings, and recipes passed down by feel instead of measurement. Ember & Spice is our love letter to that spirit—with a fresh perspective and a little smoke in the air.</p><p>Nothing fussy. Nothing rushed. Just thoughtful cooking and a seat waiting for you.</p><a class="btn outline" href="#visit">Get to know us ↗</a><div class="signature">Made with warmth, <em>always.</em></div></div></section>
+<section class="numbers reveal"><div><strong>12</strong><span>SEASONAL SPICES<br>IN OUR SIGNATURE BLEND</span></div><div><strong>100<small>%</small></strong><span>HEART IN EVERY<br>PLATE</span></div><div><strong>0</strong><span>REASONS TO RUSH<br>YOUR EVENING</span></div></section>
+<section class="gallery section" id="gallery"><div class="section-head reveal"><div><p class="eyebrow">✳ &nbsp; A LOOK AROUND</p><h2>Stay for <em>the atmosphere.</em></h2></div><p>Golden light. Good company.<br>One more story.</p></div><div class="gallery-grid">
+<button class="gallery-item big reveal" data-full="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=90" aria-label="Enlarge dinner setting"><img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85" alt="Elegant dinner setting"><span>01 / THE TABLE</span></button>
+<button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=90" aria-label="Enlarge restaurant interior"><img loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85" alt="Warm restaurant interior"><span>02 / THE SPACE</span></button>
+<button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=90" aria-label="Enlarge restaurant ambience"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Restaurant ambience"><span>03 / THE MOMENT</span></button></div><p class="note">Photography shown for this concept demo.</p></section>
+<section class="reservation" id="reserve"><div class="reserve-bg"></div><div class="reserve-shade"></div><div class="reserve-content reveal"><p class="eyebrow">✳ &nbsp; YOUR PLACE IS WAITING</p><h2>Good evenings<br>start <em>right here.</em></h2><p>Bring your favourite people. We'll take care of the rest.</p><form id="booking"><label>Your name<input name="name" required maxlength="70" placeholder="How should we call you?"></label><div class="form-row"><label>Date<input type="date" name="date" required></label><label>Guests<select name="guests"><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6+ guests</option></select></label></div><button class="btn" type="submit">Request a table ↗</button><small>Concept demo only. No real reservation will be sent.</small></form></div></section>
+<section class="visit section" id="visit"><div class="reveal"><p class="eyebrow">✳ &nbsp; COME ON IN</p><h2>Find your<br><em>new favourite.</em></h2></div><div class="visit-grid reveal"><article><small>01 / WHERE</small><h3>Model Town, Ludhiana</h3><p>Punjab, India<br><i>Fictional location for this demo</i></p></article><article><small>02 / WHEN</small><h3>Tuesday – Sunday</h3><p>12:00 PM – 11:00 PM<br>Monday: taking a breather</p></article><article><small>03 / SAY HELLO</small><h3>Let's make a plan.</h3><p>Real contact details can be added for a client.</p></article></div></section>
+</main>
+<footer><a class="brand" href="#home"><span class="monogram">E<span>&</span>S</span><span>EMBER <i>&</i> SPICE<small>MODERN INDIAN KITCHEN</small></span></a><p>Made slowly. Shared generously.</p><a class="back" href="#home">BACK TO TOP ↑</a><div class="foot-bottom"><span>© 2026 EMBER & SPICE — CONCEPT WEBSITE</span><span>BUILT WITH A LITTLE FIRE ✳</span></div></footer>
+<div class="toast" role="status" aria-live="polite"></div><div class="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image" hidden><button aria-label="Close image">×</button><img src="" alt="Enlarged gallery image"></div>
+</body></html>
